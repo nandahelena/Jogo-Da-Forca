@@ -20,7 +20,7 @@ def iniciar_jogo():
         
         print(f"Palavra:", " ".join(palavra_forca))
         print(f"\nTentativas restantes: {tentativas}")
-        print(f"Letras tentadas:", " ".join(letras_tried) if len(letras_tried) > 1 else "Nenhuma")
+        print(f"Letras tentadas:", " ".join(letras_tried) if len(letras_tried) > 0 else "Nenhuma")
 
         while True:
             letra = input("Digite uma letra: ").upper()
