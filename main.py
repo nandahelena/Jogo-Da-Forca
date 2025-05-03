@@ -18,12 +18,12 @@ def iniciar_jogo():
     print("Bem-vindo ao Jogo da Forca!\n")
     while palavra_sliced != palavra_forca:
         
-        print(f"Palavra:", " ".join(palavra_forca))
+        print(f"Palavra:", " ".join(palavra_forca).upper())
         print(f"\nTentativas restantes: {tentativas}")
         print(f"Letras tentadas:", " ".join(letras_tried) if len(letras_tried) > 0 else "Nenhuma")
 
         while True:
-            letra = input("Digite uma letra: ").upper()
+            letra = input("Digite uma letra: ").lower()
 
             if len(letra) != 1:
                 print("Por favor, insira somente 1 letra.")
@@ -32,22 +32,22 @@ def iniciar_jogo():
             else:
                 break
 
-        letras_tried.append(letra)
+        letras_tried.append(letra.upper())
 
         if letra in palavra_sliced:
-            print(f"\nBoa! A letra '{letra}' está na palavra.")
+            print(f"\nBoa! A letra '{letra.upper()}' está na palavra.")
             for j in range(len(palavra_sliced)):
                 if palavra_sliced[j] == letra:
                     palavra_forca[j] = letra
         else:
-            print(f"\nA letra '{letra}' não está na palavra.")
+            print(f"\nA letra '{letra.upper()}' não está na palavra.")
             tentativas -= 1
             if tentativas == 0: break
     
     if palavra_sliced == palavra_forca:
-        print(f"\nParabéns! Você acertou a palavra: {palavra_aleatoria}")
+        print(f"\nParabéns! Você acertou a palavra: {palavra_aleatoria.upper()}")
     else:
-        print(f"\nFim de jogo! A palavra era: {palavra_aleatoria}")
+        print(f"\nFim de jogo! A palavra era: {palavra_aleatoria.upper()}")
 
 
 if not os.path.exists("palavras.txt"):
