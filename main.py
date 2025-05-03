@@ -1,8 +1,5 @@
 import random, os
 
-with open("palavras.txt", "w") as arquivo:
-    arquivo.write("ESCOLA\nCASA\nCOMPUTADOR\nPYTHON\nBICICLETA")
-
 def randomizar_palavra():
     with open("palavras.txt", "r") as arquivo:
         palavras = arquivo.readlines()
