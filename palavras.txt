@@ -1,8 +1,8 @@
-ESCOLA
-CASA
-COMPUTADOR
-PYTHON
-BICICLETA
-BONECA
-LIVRO
-URSO
+escola
+casa
+computador
+python
+bicicleta
+boneca
+livro
+urso
